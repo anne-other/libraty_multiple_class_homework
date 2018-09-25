@@ -9,7 +9,7 @@ public class LibraryTest {
 
     @Before
     public void before(){
-        library = new Library();
+        library = new Library(100);
         book = new Book("Game Of Thrones", "George R R Martin", "Fantasy");
     }
 
@@ -22,5 +22,10 @@ public class LibraryTest {
     public void addBookToLibrary() {
         library.addBook(book);
         assertEquals(1, library.bookStock());
+    }
+
+    @Test
+    public void libraryShouldHaveCapacity() {
+        assertEquals(100, library.getCapacity());
     }
 }
