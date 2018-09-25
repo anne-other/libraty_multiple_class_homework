@@ -7,7 +7,11 @@ public class Library {
         this.books = new ArrayList<>();
     }
 
-    public int bookCount() {
+    public int bookStock() {
         return this.books.size();
+    }
+
+    public void addBook(Book book) {
+        this.books.add(book);
     }
 }
