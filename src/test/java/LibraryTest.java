@@ -28,4 +28,12 @@ public class LibraryTest {
     public void libraryShouldHaveCapacity() {
         assertEquals(100, library.getCapacity());
     }
+
+    @Test
+    public void cantAddBookIfAtCapacity() {
+        Library library1 = new Library(1);
+        library1.addBook(book);
+        library1.addBook(book);
+        assertEquals(1, library1.bookStock());
+    }
 }
