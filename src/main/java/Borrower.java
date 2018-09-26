@@ -10,4 +10,8 @@ public class Borrower {
     public int getCollection() {
         return this.collection.size();
     }
+
+//    public void borrow(Library library) {
+//        library.
+//    }
 }
