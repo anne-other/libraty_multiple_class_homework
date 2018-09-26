@@ -6,13 +6,13 @@ import static org.junit.Assert.assertEquals;
 public class BorrowerTest {
     Borrower borrower;
     Library library;
-//    Book book;
+    Book book;
 
     @Before
     public void before(){
         borrower = new Borrower();
         library = new Library(100);
-//        book = new Book("Hounded", "Kevin Hearne", "Urban Fantasy")
+        book = new Book("Hounded", "Kevin Hearne", "Urban Fantasy");
 
     }
 
@@ -21,10 +21,10 @@ public class BorrowerTest {
         assertEquals(0, borrower.getCollection());
     }
 
-//    @Test
-//    public void borrowerCanBorrowBook() {
-//        library.addBook(book);
-//        borrower.borrow(library);
-//        assertEquals(1, borrower.getCollection());
-//    }
+    @Test
+    public void borrowerCanBorrowBook() {
+        library.addBook(book);
+        borrower.borrow(library);
+        assertEquals(1, borrower.getCollection());
+    }
 }
